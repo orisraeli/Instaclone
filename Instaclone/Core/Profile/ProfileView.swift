@@ -83,7 +83,6 @@ struct ProfileView: View {
 							.scaledToFill()
 					}
 				}
-				.background(.red)
 			}
 			.navigationTitle("Profile")
 			.navigationBarTitleDisplayMode(.inline)
