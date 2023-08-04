@@ -11,6 +11,7 @@
 		458AF4B92A7D30FF004C3376 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458AF4B82A7D30FF004C3376 /* ContentView.swift */; };
 		458AF4BB2A7D3100004C3376 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 458AF4BA2A7D3100004C3376 /* Assets.xcassets */; };
 		458AF4BE2A7D3100004C3376 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 458AF4BD2A7D3100004C3376 /* Preview Assets.xcassets */; };
+		458AF4D52A7D3294004C3376 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458AF4D42A7D3294004C3376 /* MainTabView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		458AF4B82A7D30FF004C3376 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		458AF4BA2A7D3100004C3376 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		458AF4BD2A7D3100004C3376 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		458AF4D42A7D3294004C3376 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,7 +53,11 @@
 		458AF4B52A7D30FF004C3376 /* Instaclone */ = {
 			isa = PBXGroup;
 			children = (
-				458AF4B62A7D30FF004C3376 /* InstacloneApp.swift */,
+				458AF4C42A7D3137004C3376 /* App */,
+				458AF4CC2A7D3177004C3376 /* Core */,
+				458AF4CB2A7D3175004C3376 /* Extensions */,
+				458AF4CA2A7D3173004C3376 /* Model */,
+				458AF4C92A7D3171004C3376 /* Services */,
 				458AF4B82A7D30FF004C3376 /* ContentView.swift */,
 				458AF4BA2A7D3100004C3376 /* Assets.xcassets */,
 				458AF4BC2A7D3100004C3376 /* Preview Content */,
@@ -65,6 +71,99 @@
 				458AF4BD2A7D3100004C3376 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		458AF4C42A7D3137004C3376 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				458AF4B62A7D30FF004C3376 /* InstacloneApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		458AF4C92A7D3171004C3376 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		458AF4CA2A7D3173004C3376 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		458AF4CB2A7D3175004C3376 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		458AF4CC2A7D3177004C3376 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				458AF4CD2A7D319E004C3376 /* Authentication */,
+				458AF4D12A7D31A6004C3376 /* Feed */,
+				458AF4D02A7D31A4004C3376 /* Profile */,
+				458AF4CF2A7D31A2004C3376 /* Root */,
+				458AF4CE2A7D31A0004C3376 /* Search */,
+				458AF4D32A7D31CF004C3376 /* TabBar */,
+				458AF4D22A7D31CD004C3376 /* UploadPost */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		458AF4CD2A7D319E004C3376 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		458AF4CE2A7D31A0004C3376 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		458AF4CF2A7D31A2004C3376 /* Root */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Root;
+			sourceTree = "<group>";
+		};
+		458AF4D02A7D31A4004C3376 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		458AF4D12A7D31A6004C3376 /* Feed */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Feed;
+			sourceTree = "<group>";
+		};
+		458AF4D22A7D31CD004C3376 /* UploadPost */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UploadPost;
+			sourceTree = "<group>";
+		};
+		458AF4D32A7D31CF004C3376 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				458AF4D42A7D3294004C3376 /* MainTabView.swift */,
+			);
+			path = TabBar;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,6 +238,7 @@
 			files = (
 				458AF4B92A7D30FF004C3376 /* ContentView.swift in Sources */,
 				458AF4B72A7D30FF004C3376 /* InstacloneApp.swift in Sources */,
+				458AF4D52A7D3294004C3376 /* MainTabView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
