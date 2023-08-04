@@ -21,14 +21,15 @@ struct FeedView: View {
 			.navigationTitle("Feed")
 			.navigationBarTitleDisplayMode(.inline)
 			.toolbar {
+				//logo
 				ToolbarItem(placement: .navigationBarLeading) {
 					Image("instagram-black")
 						.resizable()
 						.frame(width: 100, height: 32)
 				}
 				
+				//chat button
 				ToolbarItem(placement: .navigationBarTrailing) {
-					//menu button
 					Button {
 						//TODO: add button action
 						

@@ -16,6 +16,7 @@
 		458AF4DB2A7D3CA6004C3376 /* UserStatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458AF4DA2A7D3CA6004C3376 /* UserStatView.swift */; };
 		458AF4DD2A7D4138004C3376 /* FeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458AF4DC2A7D4138004C3376 /* FeedView.swift */; };
 		458AF4DF2A7D4140004C3376 /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458AF4DE2A7D4140004C3376 /* FeedCell.swift */; };
+		458AF4E32A7D5B54004C3376 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458AF4E22A7D5B54004C3376 /* SearchView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		458AF4DA2A7D3CA6004C3376 /* UserStatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStatView.swift; sourceTree = "<group>"; };
 		458AF4DC2A7D4138004C3376 /* FeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedView.swift; sourceTree = "<group>"; };
 		458AF4DE2A7D4140004C3376 /* FeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
+		458AF4E22A7D5B54004C3376 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +137,7 @@
 		458AF4CE2A7D31A0004C3376 /* Search */ = {
 			isa = PBXGroup;
 			children = (
+				458AF4E22A7D5B54004C3376 /* SearchView.swift */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -260,6 +263,7 @@
 				458AF4D72A7D33FB004C3376 /* ProfileView.swift in Sources */,
 				458AF4B92A7D30FF004C3376 /* ContentView.swift in Sources */,
 				458AF4B72A7D30FF004C3376 /* InstacloneApp.swift in Sources */,
+				458AF4E32A7D5B54004C3376 /* SearchView.swift in Sources */,
 				458AF4DB2A7D3CA6004C3376 /* UserStatView.swift in Sources */,
 				458AF4DD2A7D4138004C3376 /* FeedView.swift in Sources */,
 				458AF4D52A7D3294004C3376 /* MainTabView.swift in Sources */,
