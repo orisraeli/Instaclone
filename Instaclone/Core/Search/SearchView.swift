@@ -9,29 +9,33 @@ import SwiftUI
 
 struct SearchView: View {
 	@State private var searchTerm = ""
+	
     var body: some View {
 		NavigationStack {
 			ScrollView {
 				LazyVStack(spacing: 12) {
-					ForEach(0..<15, id: \.self) { user in
+					ForEach(User.mockUsers) { user in
 						HStack {
-							Image("batman-2")
+							Image(user.profileImageURL ?? "")
 								.resizable()
 								.scaledToFill()
 								.frame(width: 40)
 								.clipShape(Circle())
 							
 							VStack(alignment: .leading) {
-								Text("batman77")
+								Text(user.username)
 									.fontWeight(.semibold)
 								
-								Text("Bruce Wayne")
+								if let fullname = user.fullName {
+									Text(fullname)
+								}
 							}
 							.font(.footnote)
 							
 							Spacer()
 						}
 						.padding(.horizontal)
+						.frame(maxHeight: 40)
 					}
 				}
 				.padding(.top, 8)

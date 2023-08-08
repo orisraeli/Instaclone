@@ -23,6 +23,7 @@
 		458AF4EB2A824543004C3376 /* CreateUsernameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458AF4EA2A824543004C3376 /* CreateUsernameView.swift */; };
 		458AF4EF2A824D75004C3376 /* CreatePasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458AF4EE2A824D75004C3376 /* CreatePasswordView.swift */; };
 		458AF4F12A824E77004C3376 /* CompleteSignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458AF4F02A824E77004C3376 /* CompleteSignUpView.swift */; };
+		458AF4F32A825065004C3376 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458AF4F22A825065004C3376 /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +44,7 @@
 		458AF4EA2A824543004C3376 /* CreateUsernameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUsernameView.swift; sourceTree = "<group>"; };
 		458AF4EE2A824D75004C3376 /* CreatePasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePasswordView.swift; sourceTree = "<group>"; };
 		458AF4F02A824E77004C3376 /* CompleteSignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompleteSignUpView.swift; sourceTree = "<group>"; };
+		458AF4F22A825065004C3376 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +115,7 @@
 		458AF4CA2A7D3173004C3376 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				458AF4F22A825065004C3376 /* User.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -285,6 +288,7 @@
 				458AF4B72A7D30FF004C3376 /* InstacloneApp.swift in Sources */,
 				458AF4EB2A824543004C3376 /* CreateUsernameView.swift in Sources */,
 				458AF4F12A824E77004C3376 /* CompleteSignUpView.swift in Sources */,
+				458AF4F32A825065004C3376 /* User.swift in Sources */,
 				458AF4E72A823EA7004C3376 /* AddEmailView.swift in Sources */,
 				458AF4E32A7D5B54004C3376 /* SearchView.swift in Sources */,
 				458AF4DB2A7D3CA6004C3376 /* UserStatView.swift in Sources */,
