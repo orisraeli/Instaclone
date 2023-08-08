@@ -24,6 +24,8 @@
 		458AF4EF2A824D75004C3376 /* CreatePasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458AF4EE2A824D75004C3376 /* CreatePasswordView.swift */; };
 		458AF4F12A824E77004C3376 /* CompleteSignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458AF4F02A824E77004C3376 /* CompleteSignUpView.swift */; };
 		458AF4F32A825065004C3376 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458AF4F22A825065004C3376 /* User.swift */; };
+		458AF4F52A825979004C3376 /* CurrentUserProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458AF4F42A825979004C3376 /* CurrentUserProfileView.swift */; };
+		458AF4F72A825B41004C3376 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458AF4F62A825B41004C3376 /* Post.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +47,8 @@
 		458AF4EE2A824D75004C3376 /* CreatePasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePasswordView.swift; sourceTree = "<group>"; };
 		458AF4F02A824E77004C3376 /* CompleteSignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompleteSignUpView.swift; sourceTree = "<group>"; };
 		458AF4F22A825065004C3376 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		458AF4F42A825979004C3376 /* CurrentUserProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentUserProfileView.swift; sourceTree = "<group>"; };
+		458AF4F62A825B41004C3376 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				458AF4F22A825065004C3376 /* User.swift */,
+				458AF4F62A825B41004C3376 /* Post.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -173,6 +178,7 @@
 			isa = PBXGroup;
 			children = (
 				458AF4D62A7D33FB004C3376 /* ProfileView.swift */,
+				458AF4F42A825979004C3376 /* CurrentUserProfileView.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -284,7 +290,9 @@
 				458AF4DF2A7D4140004C3376 /* FeedCell.swift in Sources */,
 				458AF4D72A7D33FB004C3376 /* ProfileView.swift in Sources */,
 				458AF4B92A7D30FF004C3376 /* ContentView.swift in Sources */,
+				458AF4F72A825B41004C3376 /* Post.swift in Sources */,
 				458AF4E52A7D628A004C3376 /* LoginView.swift in Sources */,
+				458AF4F52A825979004C3376 /* CurrentUserProfileView.swift in Sources */,
 				458AF4B72A7D30FF004C3376 /* InstacloneApp.swift in Sources */,
 				458AF4EB2A824543004C3376 /* CreateUsernameView.swift in Sources */,
 				458AF4F12A824E77004C3376 /* CompleteSignUpView.swift in Sources */,

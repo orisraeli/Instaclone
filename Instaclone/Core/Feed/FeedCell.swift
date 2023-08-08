@@ -8,26 +8,30 @@
 import SwiftUI
 
 struct FeedCell: View {
+	let post: Post
+	
     var body: some View {
 		VStack {
 			//profile image, username
 			HStack {
-				Image("batman-2")
-					.resizable()
-					.scaledToFill()
-					.frame(width: 40, height: 40)
-					.clipShape(Circle())
-				
-				Text("batman77")
-					.font(.footnote)
-					.fontWeight(.semibold)
+				if let user = post.user {
+					Image(user.profileImageURL ?? "")
+						.resizable()
+						.scaledToFill()
+						.frame(width: 40, height: 40)
+						.clipShape(Circle())
+					
+					Text(user.username)
+						.font(.footnote)
+						.fontWeight(.semibold)
+				}
 				
 				Spacer()
 			}
 			.padding(.horizontal)
 			
 			//post image
-			Image("batman-2")
+			Image(post.imageURL)
 				.resizable()
 				.scaledToFill()
 				.frame(height: 400)
@@ -68,7 +72,7 @@ struct FeedCell: View {
 			.foregroundColor(.black)
 			
 			//likes label
-			Text("23 likes")
+			Text("\(post.likes) likes")
 				.font(.footnote)
 				.fontWeight(.semibold)
 				.frame(maxWidth: .infinity, alignment: .leading)
@@ -77,16 +81,17 @@ struct FeedCell: View {
 			
 			//caption label
 			HStack {
-				Text("batman77")
+				Text(post.user?.username ?? "")
 					.fontWeight(.semibold) +
 				Text(" ") +
-				Text("This is a post caption")
+				Text(post.caption)
 			}
 			.frame(maxWidth: .infinity, alignment: .leading)
 			.padding(.horizontal)
 			.padding(.top, 1)
 			
 			//timestamp label
+			//TODO: replace label
 			Text("6h ago")
 				.font(.footnote)
 				.foregroundColor(.gray)
@@ -99,6 +104,6 @@ struct FeedCell: View {
 
 struct FeedCell_Previews: PreviewProvider {
     static var previews: some View {
-        FeedCell()
+		FeedCell(post: Post.mockPosts[0])
     }
 }

@@ -1,28 +1,27 @@
 //
-//  ProfileView.swift
+//  CurrentUserProfileView.swift
 //  Instaclone
 //
-//  Created by Or Israeli on 04/08/2023.
+//  Created by Or Israeli on 08/08/2023.
 //
 
 import SwiftUI
 
-struct ProfileView: View {
-	let user: User
-	
+struct CurrentUserProfileView: View {
 	private let columns: [GridItem] = [
 		GridItem(.flexible(), spacing: 1),
 		GridItem(.flexible(), spacing: 1),
 		GridItem(.flexible(), spacing: 1)
 	]
 	
-    var body: some View {
+	var body: some View {
+		NavigationStack {
 			ScrollView {
 				//header
 				VStack(spacing: 10) {
 					//profile picture, stats
 					HStack {
-						Image(user.profileImageURL ?? "")
+						Image("blackpanther-1")
 							.resizable()
 							.scaledToFill()
 							.frame(width: 80, height: 80)
@@ -39,20 +38,18 @@ struct ProfileView: View {
 							
 							UserStatView(value: 42, title: "Following")
 								.frame(width: 80)
-
+							
 						}
 					}
 					.padding(.horizontal)
 					
 					//username, bio
 					VStack(alignment: .leading, spacing: 4) {
-						if let fullName = user.fullName {
-							Text(fullName)
-								.font(.footnote)
-								.fontWeight(.semibold)
-						}
+						Text("Chadwick Boseman")
+							.font(.footnote)
+							.fontWeight(.semibold)
 						
-						Text(user.bio ?? "No Bio")
+						Text("Wakanda Forever")
 							.font(.footnote)
 					}
 					.frame(maxWidth: .infinity, alignment: .leading)
@@ -89,11 +86,24 @@ struct ProfileView: View {
 			}
 			.navigationTitle("Profile")
 			.navigationBarTitleDisplayMode(.inline)
-    }
+			.toolbar {
+				ToolbarItem(placement: .navigationBarTrailing) {
+					//menu button
+					Button {
+						//TODO: add button action
+						
+					} label: {
+						Label("Menu", systemImage: "line.3.horizontal")
+							.foregroundColor(.black)
+					}
+				}
+			}
+		}
+	}
 }
 
-struct ProfileView_Previews: PreviewProvider {
+struct CurrentUserProfileView_Previews: PreviewProvider {
     static var previews: some View {
-		ProfileView(user: User.mockUsers[0])
+        CurrentUserProfileView()
     }
 }
