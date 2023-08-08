@@ -10,82 +10,18 @@ import SwiftUI
 struct ProfileView: View {
 	let user: User
 	
-	private let columns: [GridItem] = [
-		GridItem(.flexible(), spacing: 1),
-		GridItem(.flexible(), spacing: 1),
-		GridItem(.flexible(), spacing: 1)
-	]
+	var posts: [Post] {
+		Post.mockPosts.filter { $0.user?.username == user.username }
+	}
 	
     var body: some View {
 			ScrollView {
 				//header
-				VStack(spacing: 10) {
-					//profile picture, stats
-					HStack {
-						Image(user.profileImageURL ?? "")
-							.resizable()
-							.scaledToFill()
-							.frame(width: 80, height: 80)
-							.clipShape(Circle())
-						
-						Spacer()
-						
-						HStack(spacing: 8) {
-							UserStatView(value: 3, title: "Posts")
-								.frame(width: 80)
-							
-							UserStatView(value: 76, title: "Followers")
-								.frame(width: 80)
-							
-							UserStatView(value: 42, title: "Following")
-								.frame(width: 80)
-
-						}
-					}
-					.padding(.horizontal)
-					
-					//username, bio
-					VStack(alignment: .leading, spacing: 4) {
-						if let fullName = user.fullName {
-							Text(fullName)
-								.font(.footnote)
-								.fontWeight(.semibold)
-						}
-						
-						Text(user.bio ?? "No Bio")
-							.font(.footnote)
-					}
-					.frame(maxWidth: .infinity, alignment: .leading)
-					.padding(.horizontal)
-					
-					//edit profile button
-					Button {
-						//TODO: add button action
-						
-					} label: {
-						Text("Edit Profile")
-							.font(.subheadline)
-							.fontWeight(.semibold)
-							.frame(width: 360, height: 32)
-							.foregroundColor(.black)
-							.overlay {
-								RoundedRectangle(cornerRadius: 6)
-									.stroke(.gray, lineWidth: 1)
-							}
-					}
-					
-					Divider()
-				}
-				
+				ProfileHeaderView(user: user)
 				
 				//posts grid
-				LazyVGrid(columns: columns, spacing: 1) {
-					ForEach(0..<15, id: \.self) { index in
-						Image("blackpanther-2")
-							.resizable()
-							.scaledToFill()
-					}
-				}
+				PostsGridView(posts: posts)
+				
 			}
 			.navigationTitle("Profile")
 			.navigationBarTitleDisplayMode(.inline)

@@ -13,22 +13,9 @@ struct FeedCell: View {
     var body: some View {
 		VStack {
 			//profile image, username
-			HStack {
-				if let user = post.user {
-					Image(user.profileImageURL ?? "")
-						.resizable()
-						.scaledToFill()
-						.frame(width: 40, height: 40)
-						.clipShape(Circle())
-					
-					Text(user.username)
-						.font(.footnote)
-						.fontWeight(.semibold)
-				}
-				
-				Spacer()
+			if let user = post.user {
+				PostHeaderView(username: user.username, profileImageURL: user.profileImageURL)
 			}
-			.padding(.horizontal)
 			
 			//post image
 			Image(post.imageURL)
@@ -100,6 +87,7 @@ struct FeedCell: View {
 				.padding(.top, 1)
 		}
     }
+	
 }
 
 struct FeedCell_Previews: PreviewProvider {
