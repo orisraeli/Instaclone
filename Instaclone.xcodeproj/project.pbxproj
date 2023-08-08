@@ -29,6 +29,8 @@
 		458AF4F92A826A49004C3376 /* PostsGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458AF4F82A826A49004C3376 /* PostsGridView.swift */; };
 		458AF4FB2A826BB2004C3376 /* ProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458AF4FA2A826BB2004C3376 /* ProfileHeaderView.swift */; };
 		458AF4FD2A826E52004C3376 /* PostHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458AF4FC2A826E52004C3376 /* PostHeaderView.swift */; };
+		458AF4FF2A8272E0004C3376 /* UploadPostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458AF4FE2A8272E0004C3376 /* UploadPostView.swift */; };
+		458AF5012A82766D004C3376 /* UploadPostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458AF5002A82766D004C3376 /* UploadPostViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +57,8 @@
 		458AF4F82A826A49004C3376 /* PostsGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsGridView.swift; sourceTree = "<group>"; };
 		458AF4FA2A826BB2004C3376 /* ProfileHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderView.swift; sourceTree = "<group>"; };
 		458AF4FC2A826E52004C3376 /* PostHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostHeaderView.swift; sourceTree = "<group>"; };
+		458AF4FE2A8272E0004C3376 /* UploadPostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadPostView.swift; sourceTree = "<group>"; };
+		458AF5002A82766D004C3376 /* UploadPostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadPostViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -203,6 +207,8 @@
 		458AF4D22A7D31CD004C3376 /* UploadPost */ = {
 			isa = PBXGroup;
 			children = (
+				458AF4FE2A8272E0004C3376 /* UploadPostView.swift */,
+				458AF5002A82766D004C3376 /* UploadPostViewModel.swift */,
 			);
 			path = UploadPost;
 			sourceTree = "<group>";
@@ -308,9 +314,11 @@
 				458AF4EB2A824543004C3376 /* CreateUsernameView.swift in Sources */,
 				458AF4FB2A826BB2004C3376 /* ProfileHeaderView.swift in Sources */,
 				458AF4F12A824E77004C3376 /* CompleteSignUpView.swift in Sources */,
+				458AF5012A82766D004C3376 /* UploadPostViewModel.swift in Sources */,
 				458AF4F32A825065004C3376 /* User.swift in Sources */,
 				458AF4E72A823EA7004C3376 /* AddEmailView.swift in Sources */,
 				458AF4E32A7D5B54004C3376 /* SearchView.swift in Sources */,
+				458AF4FF2A8272E0004C3376 /* UploadPostView.swift in Sources */,
 				458AF4DB2A7D3CA6004C3376 /* UserStatView.swift in Sources */,
 				458AF4DD2A7D4138004C3376 /* FeedView.swift in Sources */,
 				458AF4D52A7D3294004C3376 /* MainTabView.swift in Sources */,
