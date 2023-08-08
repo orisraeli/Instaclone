@@ -25,20 +25,13 @@ struct LoginView: View {
 				//text fields
 				VStack {
 					TextField("Enter your email", text: $email)
-						.font(.subheadline)
+						.ICTextFieldStyle()
 						.textInputAutocapitalization(.never)
 						.keyboardType(.emailAddress)
-						.padding()
-						.background(Color(.systemGray6))
-						.cornerRadius(10)
-						.padding(.horizontal, 24)
+
 					
 					SecureField("Enter your password", text: $password)
-						.font(.subheadline)
-						.padding()
-						.background(Color(.systemGray6))
-						.cornerRadius(10)
-						.padding(.horizontal, 24)
+						.ICTextFieldStyle()
 				}
 				
 				//forgot password button
@@ -99,7 +92,8 @@ struct LoginView: View {
 				Divider()
 				
 				NavigationLink {
-					Text("Sign Up")
+					AddEmailView()
+						.navigationBarBackButtonHidden()
 				} label: {
 					HStack(spacing: 3) {
 						Text("Don't have an account?")
