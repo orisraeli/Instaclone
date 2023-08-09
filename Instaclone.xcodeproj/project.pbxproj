@@ -12,6 +12,8 @@
 		450CF5CB2A83DD7100F7D57A /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 450CF5CA2A83DD7100F7D57A /* FirebaseFirestore */; };
 		450CF5CD2A83DD7100F7D57A /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 450CF5CC2A83DD7100F7D57A /* FirebaseFirestoreSwift */; };
 		450CF5CF2A83DD7100F7D57A /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 450CF5CE2A83DD7100F7D57A /* FirebaseStorage */; };
+		450CF5D32A83DF6900F7D57A /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450CF5D22A83DF6900F7D57A /* AuthService.swift */; };
+		450CF5D52A83E14200F7D57A /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450CF5D42A83E14200F7D57A /* ContentViewModel.swift */; };
 		458AF4B72A7D30FF004C3376 /* InstacloneApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458AF4B62A7D30FF004C3376 /* InstacloneApp.swift */; };
 		458AF4B92A7D30FF004C3376 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458AF4B82A7D30FF004C3376 /* ContentView.swift */; };
 		458AF4BB2A7D3100004C3376 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 458AF4BA2A7D3100004C3376 /* Assets.xcassets */; };
@@ -40,6 +42,8 @@
 
 /* Begin PBXFileReference section */
 		450CF5C52A83DC5F00F7D57A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		450CF5D22A83DF6900F7D57A /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		450CF5D42A83E14200F7D57A /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
 		458AF4B32A7D30FF004C3376 /* Instaclone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Instaclone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		458AF4B62A7D30FF004C3376 /* InstacloneApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstacloneApp.swift; sourceTree = "<group>"; };
 		458AF4B82A7D30FF004C3376 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -82,6 +86,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		450CF5D02A83DF4000F7D57A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				458AF4E42A7D628A004C3376 /* LoginView.swift */,
+				458AF4E62A823EA7004C3376 /* AddEmailView.swift */,
+				458AF4EA2A824543004C3376 /* CreateUsernameView.swift */,
+				458AF4EE2A824D75004C3376 /* CreatePasswordView.swift */,
+				458AF4F02A824E77004C3376 /* CompleteSignUpView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		450CF5D12A83DF5400F7D57A /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				450CF5D22A83DF6900F7D57A /* AuthService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
 		458AF4AA2A7D30FF004C3376 = {
 			isa = PBXGroup;
 			children = (
@@ -106,7 +130,6 @@
 				458AF4CB2A7D3175004C3376 /* Extensions */,
 				458AF4CA2A7D3173004C3376 /* Model */,
 				458AF4C92A7D3171004C3376 /* Services */,
-				458AF4B82A7D30FF004C3376 /* ContentView.swift */,
 				450CF5C52A83DC5F00F7D57A /* GoogleService-Info.plist */,
 				458AF4BA2A7D3100004C3376 /* Assets.xcassets */,
 				458AF4BC2A7D3100004C3376 /* Preview Content */,
@@ -171,11 +194,8 @@
 		458AF4CD2A7D319E004C3376 /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
-				458AF4E42A7D628A004C3376 /* LoginView.swift */,
-				458AF4E62A823EA7004C3376 /* AddEmailView.swift */,
-				458AF4EA2A824543004C3376 /* CreateUsernameView.swift */,
-				458AF4EE2A824D75004C3376 /* CreatePasswordView.swift */,
-				458AF4F02A824E77004C3376 /* CompleteSignUpView.swift */,
+				450CF5D12A83DF5400F7D57A /* Service */,
+				450CF5D02A83DF4000F7D57A /* Views */,
 			);
 			path = Authentication;
 			sourceTree = "<group>";
@@ -191,6 +211,8 @@
 		458AF4CF2A7D31A2004C3376 /* Root */ = {
 			isa = PBXGroup;
 			children = (
+				458AF4B82A7D30FF004C3376 /* ContentView.swift */,
+				450CF5D42A83E14200F7D57A /* ContentViewModel.swift */,
 			);
 			path = Root;
 			sourceTree = "<group>";
@@ -323,12 +345,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				458AF4FD2A826E52004C3376 /* PostHeaderView.swift in Sources */,
+				450CF5D32A83DF6900F7D57A /* AuthService.swift in Sources */,
 				458AF4E92A824309004C3376 /* ICTextField.swift in Sources */,
 				458AF4DF2A7D4140004C3376 /* FeedCell.swift in Sources */,
 				458AF4D72A7D33FB004C3376 /* ProfileView.swift in Sources */,
 				458AF4B92A7D30FF004C3376 /* ContentView.swift in Sources */,
 				458AF4F72A825B41004C3376 /* Post.swift in Sources */,
 				458AF4E52A7D628A004C3376 /* LoginView.swift in Sources */,
+				450CF5D52A83E14200F7D57A /* ContentViewModel.swift in Sources */,
 				458AF4F52A825979004C3376 /* CurrentUserProfileView.swift in Sources */,
 				458AF4B72A7D30FF004C3376 /* InstacloneApp.swift in Sources */,
 				458AF4F92A826A49004C3376 /* PostsGridView.swift in Sources */,
