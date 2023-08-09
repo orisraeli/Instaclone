@@ -10,27 +10,31 @@ import SwiftUI
 
 struct UploadPostView: View {
 	@StateObject var viewModel = UploadPostViewModel()
+	@Binding var selectedTab: Int
 	
     var body: some View {
 		VStack {
 			//action toolbar
 			HStack {
+				//cancel button
 				Button {
+					selectedTab = 0
 					viewModel.cancelUpload()
 				} label: {
 					Text("Cancel")
 				}
 				
 				Spacer()
-
+				
+				//nav bar title
 				Text("New Post")
 					.fontWeight(.semibold)
 				
 				Spacer()
 
-				
+				//upload button
 				Button {
-					print("tapped upload")
+					//tapped upload
 				} label: {
 					Text("Upload")
 						.fontWeight(.semibold)
@@ -64,6 +68,6 @@ struct UploadPostView: View {
 
 struct UploadPostView_Previews: PreviewProvider {
     static var previews: some View {
-        UploadPostView()
+		UploadPostView(selectedTab: .constant(0))
     }
 }
