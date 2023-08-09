@@ -1,5 +1,5 @@
 //
-//  CompleteSignUpView.swift
+//  CreateUsernameView.swift
 //  Instaclone
 //
 //  Created by Or Israeli on 08/08/2023.
@@ -7,30 +7,32 @@
 
 import SwiftUI
 
-struct CompleteSignUpView: View {
+struct CreateUsernameView: View {
+	@EnvironmentObject var viewModel: RegistrationViewModel
 	@Environment(\.dismiss) var dismiss
 		
 	var body: some View {
 		VStack(spacing: 12) {
-			Spacer()
-			
-			Text("Welcome to Instaclone, USERNAME")
+			Text("Create username")
 				.font(.title2).bold()
-				.multilineTextAlignment(.center)
 				.padding(.top)
 			
-			Text("Click here to complete registration and start using Instaclone")
+			Text("Pick a username for your new account. You can always change it later.")
 				.font(.footnote)
 				.foregroundColor(.gray)
 				.multilineTextAlignment(.center)
 				.padding(.horizontal, 24)
 			
+			TextField("username", text: $viewModel.username)
+				.ICTextFieldStyle()
+				.textInputAutocapitalization(.never)
+			
 			//next button
-			Button {
-				//TODO: add action
-				print("tapped sign up")
+			NavigationLink {
+				CreatePasswordView()
+					.navigationBarBackButtonHidden()
 			} label: {
-				Text("Sign Up")
+				Text("Next")
 					.foregroundColor(.white)
 					.font(.subheadline)
 					.fontWeight(.semibold)
@@ -56,8 +58,8 @@ struct CompleteSignUpView: View {
 	}
 }
 
-struct CompleteSignUpView_Previews: PreviewProvider {
+struct CreateUsernameView_Previews: PreviewProvider {
     static var previews: some View {
-        CompleteSignUpView()
+        CreateUsernameView()
     }
 }

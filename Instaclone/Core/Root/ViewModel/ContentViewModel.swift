@@ -20,7 +20,7 @@ class ContentViewModel: ObservableObject {
 	}
 	
 	func setupSubscribers() {
-		service.userSession.publisher.sink { [weak self] userSession in
+		service.$userSession.sink { [weak self] userSession in
 			self?.userSession = userSession
 		}
 		.store(in: &cancellables)

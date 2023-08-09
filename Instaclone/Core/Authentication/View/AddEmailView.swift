@@ -1,5 +1,5 @@
 //
-//  CreatePasswordView.swift
+//  AddEmailView.swift
 //  Instaclone
 //
 //  Created by Or Israeli on 08/08/2023.
@@ -7,29 +7,30 @@
 
 import SwiftUI
 
-struct CreatePasswordView: View {
+struct AddEmailView: View {
+	@EnvironmentObject var viewModel: RegistrationViewModel
 	@Environment(\.dismiss) var dismiss
 	
-	@State private var password: String = ""
-	
-	var body: some View {
+    var body: some View {
 		VStack(spacing: 12) {
-			Text("Create a password")
+			Text("Add your email")
 				.font(.title2).bold()
 				.padding(.top)
 			
-			Text("Your password must be at least 6 characters in length.")
+			Text("You'll use this email to sign in to your account")
 				.font(.footnote)
 				.foregroundColor(.gray)
 				.multilineTextAlignment(.center)
 				.padding(.horizontal, 24)
 			
-			SecureField("password", text: $password)
+			TextField("email address", text: $viewModel.email)
 				.ICTextFieldStyle()
-			
+				.textInputAutocapitalization(.never)
+				.keyboardType(.emailAddress)
+
 			//next button
 			NavigationLink {
-				CompleteSignUpView()
+				CreateUsernameView()
 					.navigationBarBackButtonHidden()
 			} label: {
 				Text("Next")
@@ -55,11 +56,13 @@ struct CreatePasswordView: View {
 				}
 			}
 		}
-	}
+    }
 }
 
-struct CreatePasswordView_Previews: PreviewProvider {
+struct AddEmailView_Previews: PreviewProvider {
     static var previews: some View {
-        CreatePasswordView()
+		NavigationStack {
+			AddEmailView()
+		}
     }
 }

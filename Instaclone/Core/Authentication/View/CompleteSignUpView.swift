@@ -1,5 +1,5 @@
 //
-//  AddEmailView.swift
+//  CompleteSignUpView.swift
 //  Instaclone
 //
 //  Created by Or Israeli on 08/08/2023.
@@ -7,34 +7,33 @@
 
 import SwiftUI
 
-struct AddEmailView: View {
+struct CompleteSignUpView: View {
+	@EnvironmentObject var viewModel: RegistrationViewModel
 	@Environment(\.dismiss) var dismiss
-	
-	@State private var email: String = ""
-	
-    var body: some View {
+		
+	var body: some View {
 		VStack(spacing: 12) {
-			Text("Add your email")
+			Spacer()
+			
+			Text("Welcome to Instaclone, \(viewModel.username)")
 				.font(.title2).bold()
+				.multilineTextAlignment(.center)
 				.padding(.top)
 			
-			Text("You'll use this email to sign in to your account")
+			Text("Click here to complete registration and start using Instaclone")
 				.font(.footnote)
 				.foregroundColor(.gray)
 				.multilineTextAlignment(.center)
 				.padding(.horizontal, 24)
 			
-			TextField("email address", text: $email)
-				.ICTextFieldStyle()
-				.textInputAutocapitalization(.never)
-				.keyboardType(.emailAddress)
-
 			//next button
-			NavigationLink {
-				CreateUsernameView()
-					.navigationBarBackButtonHidden()
+			Button {
+				Task {
+					try await viewModel.register()
+				}
+				print("tapped sign up")
 			} label: {
-				Text("Next")
+				Text("Sign Up")
 					.foregroundColor(.white)
 					.font(.subheadline)
 					.fontWeight(.semibold)
@@ -57,13 +56,11 @@ struct AddEmailView: View {
 				}
 			}
 		}
-    }
+	}
 }
 
-struct AddEmailView_Previews: PreviewProvider {
+struct CompleteSignUpView_Previews: PreviewProvider {
     static var previews: some View {
-		NavigationStack {
-			AddEmailView()
-		}
+        CompleteSignUpView()
     }
 }
