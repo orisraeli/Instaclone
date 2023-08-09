@@ -8,8 +8,7 @@
 import SwiftUI
 
 struct LoginView: View {
-	@State private var email = ""
-	@State private var password = ""
+	@StateObject var viewModel = LoginViewModel()
 	
     var body: some View {
 		NavigationStack {
@@ -24,13 +23,13 @@ struct LoginView: View {
 				
 				//text fields
 				VStack {
-					TextField("Enter your email", text: $email)
+					TextField("Enter your email", text: $viewModel.email)
 						.ICTextFieldStyle()
 						.textInputAutocapitalization(.never)
 						.keyboardType(.emailAddress)
 
 					
-					SecureField("Enter your password", text: $password)
+					SecureField("Enter your password", text: $viewModel.password)
 						.ICTextFieldStyle()
 				}
 				
@@ -48,8 +47,10 @@ struct LoginView: View {
 				
 				//login button
 				Button {
-					print("tapped login")
-					//TODO: add button action
+					print("Tapped login")
+					Task {
+						try await viewModel.login()
+					}
 				} label: {
 					Text("Login")
 						.foregroundColor(.white)
@@ -75,17 +76,23 @@ struct LoginView: View {
 				}
 				.foregroundColor(.gray)
 				
-				HStack {
-					Image("facebook_logo_small")
-						.resizable()
-						.frame(width: 32, height: 32)
-					
-					Text("Continue with Facebook")
-						.font(.footnote)
-						.fontWeight(.semibold)
-						.foregroundColor(.blue)
+				//facebook login button
+				Button {
+					//TODO: add button action
+					print("Tapped on facebook login button")
+				} label: {
+					HStack {
+						Image("facebook_logo_small")
+							.resizable()
+							.frame(width: 32, height: 32)
+						
+						Text("Continue with Facebook")
+							.font(.footnote)
+							.fontWeight(.semibold)
+							.foregroundColor(.blue)
+					}
+					.padding(.top, 8)
 				}
-				.padding(.top, 8)
 
 				Spacer()
 				

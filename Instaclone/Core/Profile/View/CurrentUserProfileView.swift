@@ -9,6 +9,8 @@ import SwiftUI
 
 struct CurrentUserProfileView: View {
 	let user: User
+
+	@StateObject var viewModel = ProfileViewModel()
 	
 	var posts: [Post] {
 		Post.mockPosts.filter { $0.user?.username == user.username }
@@ -30,7 +32,7 @@ struct CurrentUserProfileView: View {
 					//menu button
 					Button {
 						//TODO: add button action
-						
+						viewModel.signOut()
 					} label: {
 						Label("Menu", systemImage: "line.3.horizontal")
 							.foregroundColor(.black)

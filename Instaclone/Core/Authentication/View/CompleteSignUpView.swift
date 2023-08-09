@@ -15,8 +15,8 @@ struct CompleteSignUpView: View {
 		VStack(spacing: 12) {
 			Spacer()
 			
-			Text("Welcome to Instaclone, \(viewModel.username)")
-				.font(.title2).bold()
+			Text("Welcome to Instaclone, \(viewModel.username).")
+				.font(.title2.bold())
 				.multilineTextAlignment(.center)
 				.padding(.top)
 			
