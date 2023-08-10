@@ -43,6 +43,8 @@
 		458AF5012A82766D004C3376 /* UploadPostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458AF5002A82766D004C3376 /* UploadPostViewModel.swift */; };
 		458AF5032A84F52C004C3376 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458AF5022A84F52C004C3376 /* UserService.swift */; };
 		458AF5072A84F60A004C3376 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458AF5062A84F60A004C3376 /* SearchViewModel.swift */; };
+		458AF5092A850425004C3376 /* EditProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458AF5082A850425004C3376 /* EditProfileView.swift */; };
+		458AF50B2A850640004C3376 /* EditProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458AF50A2A850640004C3376 /* EditProfileViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -79,6 +81,8 @@
 		458AF5002A82766D004C3376 /* UploadPostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadPostViewModel.swift; sourceTree = "<group>"; };
 		458AF5022A84F52C004C3376 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		458AF5062A84F60A004C3376 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
+		458AF5082A850425004C3376 /* EditProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileView.swift; sourceTree = "<group>"; };
+		458AF50A2A850640004C3376 /* EditProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,6 +167,7 @@
 				458AF4D62A7D33FB004C3376 /* ProfileView.swift */,
 				458AF4F42A825979004C3376 /* CurrentUserProfileView.swift */,
 				458AF4FA2A826BB2004C3376 /* ProfileHeaderView.swift */,
+				458AF5082A850425004C3376 /* EditProfileView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -171,6 +176,7 @@
 			isa = PBXGroup;
 			children = (
 				450CF5DD2A83EEB800F7D57A /* ProfileViewModel.swift */,
+				458AF50A2A850640004C3376 /* EditProfileViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -431,6 +437,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				458AF5092A850425004C3376 /* EditProfileView.swift in Sources */,
 				458AF5032A84F52C004C3376 /* UserService.swift in Sources */,
 				458AF4FD2A826E52004C3376 /* PostHeaderView.swift in Sources */,
 				450CF5D32A83DF6900F7D57A /* AuthService.swift in Sources */,
@@ -443,6 +450,7 @@
 				458AF4E52A7D628A004C3376 /* LoginView.swift in Sources */,
 				450CF5D52A83E14200F7D57A /* ContentViewModel.swift in Sources */,
 				458AF4F52A825979004C3376 /* CurrentUserProfileView.swift in Sources */,
+				458AF50B2A850640004C3376 /* EditProfileViewModel.swift in Sources */,
 				450CF5DE2A83EEB800F7D57A /* ProfileViewModel.swift in Sources */,
 				458AF4B72A7D30FF004C3376 /* InstacloneApp.swift in Sources */,
 				458AF4F92A826A49004C3376 /* PostsGridView.swift in Sources */,

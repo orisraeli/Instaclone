@@ -8,6 +8,7 @@
 import Foundation
 
 class ProfileViewModel: ObservableObject {
+	@Published var presentingEditProfileView = false
 	
 	func signOut() {
 		AuthService.shared.signOut()
