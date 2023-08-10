@@ -24,8 +24,8 @@ struct CreateUsernameView: View {
 				.padding(.horizontal, 24)
 			
 			TextField("username", text: $viewModel.username)
-				.ICTextFieldStyle()
 				.textInputAutocapitalization(.never)
+				.ICTextFieldStyle()
 			
 			//next button
 			NavigationLink {

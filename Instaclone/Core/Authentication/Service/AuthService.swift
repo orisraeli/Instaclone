@@ -5,7 +5,9 @@
 //  Created by Or Israeli on 09/08/2023.
 //
 
+import Firebase
 import FirebaseAuth
+import FirebaseFirestoreSwift
 import Foundation
 
 class AuthService {
@@ -36,6 +38,7 @@ class AuthService {
 		do {
 			let result = try await Auth.auth().createUser(withEmail: email, password: password)
 			self.userSession = result.user
+			await uploadUserData(for: result.user.uid, email: email, username: username)
 		} catch {
 			print("Failed to register user with error: \(error.localizedDescription)")
 		}
@@ -49,5 +52,13 @@ class AuthService {
 		print("Signing out current user.")
 		try? Auth.auth().signOut()
 		self.userSession = nil
+	}
+	
+	private func uploadUserData(for userID: String, email: String, username: String) async {
+		print("Uploading user data.")
+		let user = User(id: userID, email: email, username: username)
+		guard let encoded = try? Firestore.Encoder().encode(user) else { return }
+		
+		try? await Firestore.firestore().collection("users").document(user.id).setData(encoded)
 	}
 }
