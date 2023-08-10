@@ -28,10 +28,11 @@ struct CompleteSignUpView: View {
 			
 			//next button
 			Button {
+				print("tapped sign up")
 				Task {
 					try await viewModel.register()
 				}
-				print("tapped sign up")
+				viewModel.cleanup()
 			} label: {
 				Text("Sign Up")
 					.foregroundColor(.white)

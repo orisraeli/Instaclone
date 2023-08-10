@@ -24,9 +24,10 @@ struct AddEmailView: View {
 				.padding(.horizontal, 24)
 			
 			TextField("email address", text: $viewModel.email)
-				.ICTextFieldStyle()
 				.textInputAutocapitalization(.never)
+				.autocorrectionDisabled()
 				.keyboardType(.emailAddress)
+				.ICTextFieldStyle()
 
 			//next button
 			NavigationLink {

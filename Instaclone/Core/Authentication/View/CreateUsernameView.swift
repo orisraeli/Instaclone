@@ -25,6 +25,7 @@ struct CreateUsernameView: View {
 			
 			TextField("username", text: $viewModel.username)
 				.textInputAutocapitalization(.never)
+				.autocorrectionDisabled()
 				.ICTextFieldStyle()
 			
 			//next button
