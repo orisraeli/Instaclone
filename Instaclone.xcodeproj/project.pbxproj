@@ -46,6 +46,7 @@
 		458AF5092A850425004C3376 /* EditProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458AF5082A850425004C3376 /* EditProfileView.swift */; };
 		458AF50B2A850640004C3376 /* EditProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458AF50A2A850640004C3376 /* EditProfileViewModel.swift */; };
 		4595B6EC2A8677F700FF318B /* EditProfileRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4595B6EB2A8677F700FF318B /* EditProfileRowView.swift */; };
+		4595B6EE2A86830900FF318B /* ImageUploader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4595B6ED2A86830900FF318B /* ImageUploader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -85,6 +86,7 @@
 		458AF5082A850425004C3376 /* EditProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileView.swift; sourceTree = "<group>"; };
 		458AF50A2A850640004C3376 /* EditProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewModel.swift; sourceTree = "<group>"; };
 		4595B6EB2A8677F700FF318B /* EditProfileRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileRowView.swift; sourceTree = "<group>"; };
+		4595B6ED2A86830900FF318B /* ImageUploader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUploader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -235,6 +237,7 @@
 			isa = PBXGroup;
 			children = (
 				458AF5022A84F52C004C3376 /* UserService.swift */,
+				4595B6ED2A86830900FF318B /* ImageUploader.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -454,6 +457,7 @@
 				450CF5D52A83E14200F7D57A /* ContentViewModel.swift in Sources */,
 				458AF4F52A825979004C3376 /* CurrentUserProfileView.swift in Sources */,
 				458AF50B2A850640004C3376 /* EditProfileViewModel.swift in Sources */,
+				4595B6EE2A86830900FF318B /* ImageUploader.swift in Sources */,
 				450CF5DE2A83EEB800F7D57A /* ProfileViewModel.swift in Sources */,
 				458AF4B72A7D30FF004C3376 /* InstacloneApp.swift in Sources */,
 				458AF4F92A826A49004C3376 /* PostsGridView.swift in Sources */,
