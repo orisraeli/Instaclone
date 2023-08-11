@@ -45,6 +45,7 @@
 		458AF5072A84F60A004C3376 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458AF5062A84F60A004C3376 /* SearchViewModel.swift */; };
 		458AF5092A850425004C3376 /* EditProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458AF5082A850425004C3376 /* EditProfileView.swift */; };
 		458AF50B2A850640004C3376 /* EditProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458AF50A2A850640004C3376 /* EditProfileViewModel.swift */; };
+		4595B6EC2A8677F700FF318B /* EditProfileRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4595B6EB2A8677F700FF318B /* EditProfileRowView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -83,6 +84,7 @@
 		458AF5062A84F60A004C3376 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 		458AF5082A850425004C3376 /* EditProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileView.swift; sourceTree = "<group>"; };
 		458AF50A2A850640004C3376 /* EditProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewModel.swift; sourceTree = "<group>"; };
+		4595B6EB2A8677F700FF318B /* EditProfileRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileRowView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,6 +170,7 @@
 				458AF4F42A825979004C3376 /* CurrentUserProfileView.swift */,
 				458AF4FA2A826BB2004C3376 /* ProfileHeaderView.swift */,
 				458AF5082A850425004C3376 /* EditProfileView.swift */,
+				4595B6EB2A8677F700FF318B /* EditProfileRowView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -466,6 +469,7 @@
 				450CF5DC2A83E4A200F7D57A /* RegistrationViewModel.swift in Sources */,
 				458AF4DB2A7D3CA6004C3376 /* UserStatView.swift in Sources */,
 				458AF4DD2A7D4138004C3376 /* FeedView.swift in Sources */,
+				4595B6EC2A8677F700FF318B /* EditProfileRowView.swift in Sources */,
 				458AF4D52A7D3294004C3376 /* MainTabView.swift in Sources */,
 				458AF4EF2A824D75004C3376 /* CreatePasswordView.swift in Sources */,
 			);

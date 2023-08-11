@@ -37,19 +37,44 @@ struct EditProfileView: View {
 						.fontWeight(.bold)
 				}
 			}
-			.padding()
+			.padding(.horizontal)
 			
 			Divider()
 			
 			//edit profile pic
 			PhotosPicker(selection: $viewModel.selectedImage) {
-				Image(systemName: "person")
-					.resizable()
-					.frame(width: 80, height: 80)
+				VStack {
+					if let image = viewModel.profileImage {
+						image
+							.resizable()
+							.clipShape(Circle())
+							.frame(width: 80, height: 80)
+					} else {
+						Image(systemName: "person")
+							.resizable()
+							.foregroundColor(.white)
+							.background(.gray)
+							.clipShape(Circle())
+							.frame(width: 80, height: 80)
+					}
+					
+					Text("Edit profile picture")
+						.font(.footnote)
+						.fontWeight(.semibold)
+					
+					Divider()
+				}
 			}
+			.padding(.vertical, 8)
 			
 			//edit profile info
+			VStack {
+				EditProfileRowView(title: "Name", placeholder: "Enter your full name...", text: $viewModel.fullName)
+				
+				EditProfileRowView(title: "Bio", placeholder: "Tell people about you...", text: $viewModel.bio)
+			}
 			
+			Spacer()
 		}
     }
 }

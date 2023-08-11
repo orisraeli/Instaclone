@@ -5,10 +5,14 @@
 //  Created by Or Israeli on 10/08/2023.
 //
 
+import Firebase
 import PhotosUI
 import SwiftUI
 
+@MainActor
 class EditProfileViewModel: ObservableObject {
+	@Published var fullName = ""
+	@Published var bio = ""
 	@Published var profileImage: Image?
 	@Published var selectedImage: PhotosPickerItem? {
 		didSet {
