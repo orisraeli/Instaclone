@@ -9,8 +9,12 @@ import PhotosUI
 import SwiftUI
 
 struct EditProfileView: View {
-	@StateObject var viewModel = EditProfileViewModel()
+	@StateObject var viewModel: EditProfileViewModel
 	@Environment(\.dismiss) var dismiss
+	
+	init(user: User) {
+		self._viewModel = StateObject(wrappedValue: EditProfileViewModel(user: user))
+	}
 	
     var body: some View {
 		VStack {
@@ -29,8 +33,10 @@ struct EditProfileView: View {
 				Spacer()
 				
 				Button {
-					//TODO: add button action
-					print("update profile info")
+					Task {
+						try await viewModel.updateUserData()
+					}
+					dismiss()
 				} label: {
 					Text("Done")
 						.font(.subheadline)
@@ -81,6 +87,6 @@ struct EditProfileView: View {
 
 struct EditProfileView_Previews: PreviewProvider {
     static var previews: some View {
-        EditProfileView()
+		EditProfileView(user: User.mockUsers[0])
     }
 }
