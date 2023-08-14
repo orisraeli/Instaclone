@@ -8,18 +8,13 @@
 import SwiftUI
 
 struct PostHeaderView: View {
-	let username: String
-	let profileImageURL: String?
+	let user: User
 	
     var body: some View {
 		HStack {
-			Image(profileImageURL ?? "")
-				.resizable()
-				.scaledToFill()
-				.frame(width: 40, height: 40)
-				.clipShape(Circle())
+			CircularProfileImageView(user: user, size: .xSmall)
 			
-			Text(username)
+			Text(user.username)
 				.font(.footnote)
 				.fontWeight(.semibold)
 			
@@ -31,6 +26,6 @@ struct PostHeaderView: View {
 
 struct PostHeaderView_Previews: PreviewProvider {
     static var previews: some View {
-		PostHeaderView(username: User.mockUsers[0].username, profileImageURL: User.mockUsers[0].profileImageURL)
+		PostHeaderView(user: User.mockUsers[1])
     }
 }

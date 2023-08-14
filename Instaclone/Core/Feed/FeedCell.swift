@@ -14,7 +14,7 @@ struct FeedCell: View {
 		VStack {
 			//profile image, username
 			if let user = post.user {
-				PostHeaderView(username: user.username, profileImageURL: user.profileImageURL)
+				PostHeaderView(user: user)
 			}
 			
 			//post image
