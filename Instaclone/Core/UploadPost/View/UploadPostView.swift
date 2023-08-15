@@ -19,7 +19,7 @@ struct UploadPostView: View {
 				//cancel button
 				Button {
 					selectedTab = 0
-					viewModel.cancelUpload()
+					viewModel.clearUploadData()
 				} label: {
 					Text("Cancel")
 				}
@@ -34,7 +34,14 @@ struct UploadPostView: View {
 
 				//upload button
 				Button {
-					//tapped upload
+					print("Tapped Upload Post button")
+					
+					Task {
+						try await viewModel.uploadPost(caption: viewModel.caption)
+						
+						selectedTab = 0
+						viewModel.clearUploadData()
+					}
 				} label: {
 					Text("Upload")
 						.fontWeight(.semibold)
