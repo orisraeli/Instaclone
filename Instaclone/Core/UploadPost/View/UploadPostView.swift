@@ -61,6 +61,7 @@ struct UploadPostView: View {
 				}
 				
 				TextField("caption this post...", text: $viewModel.caption, axis: .vertical)
+					.textInputAutocapitalization(.never)
 			}
 			.padding()
 			

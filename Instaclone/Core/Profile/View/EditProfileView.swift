@@ -54,6 +54,7 @@ struct EditProfileView: View {
 					if let image = viewModel.profileImage {
 						image
 							.resizable()
+							.scaledToFill()
 							.clipShape(Circle())
 							.frame(width: 80, height: 80)
 					} else {
