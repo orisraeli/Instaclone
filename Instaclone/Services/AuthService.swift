@@ -41,8 +41,10 @@ class AuthService {
 		
 		do {
 			let result = try await Auth.auth().createUser(withEmail: email, password: password)
+			print("User created.")
 			self.userSession = result.user
 			await uploadUserData(for: result.user.uid, email: email, username: username)
+			print("Uploaded user data.")
 		} catch {
 			print("Failed to register user with error: \(error.localizedDescription)")
 		}

@@ -57,6 +57,7 @@ struct CompleteSignUpView: View {
 				}
 			}
 		}
+		.alert("Couldn't sign up", isPresented: $viewModel.presentErrorMessage) { }
 	}
 }
 
