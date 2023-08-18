@@ -12,10 +12,6 @@ struct CurrentUserProfileView: View {
 
 	@StateObject var viewModel = ProfileViewModel()
 	
-	var posts: [Post] {
-		Post.mockPosts.filter { $0.user?.username == user.username }
-	}
-	
 	var body: some View {
 		NavigationStack {
 			ScrollView {
@@ -23,7 +19,7 @@ struct CurrentUserProfileView: View {
 				ProfileHeaderView(user: user)
 				
 				//posts grid
-				PostsGridView(posts: posts)
+				PostsGridView(user: user)
 			}
 			.navigationTitle("Profile")
 			.navigationBarTitleDisplayMode(.inline)

@@ -18,6 +18,8 @@
 		450CF5DE2A83EEB800F7D57A /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450CF5DD2A83EEB800F7D57A /* ProfileViewModel.swift */; };
 		450CF5E22A83F11D00F7D57A /* LoginViewMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450CF5E12A83F11D00F7D57A /* LoginViewMode.swift */; };
 		454A4D152A8F511A00C40F75 /* FeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454A4D142A8F511A00C40F75 /* FeedViewModel.swift */; };
+		454A4D172A8F57A000C40F75 /* PostService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454A4D162A8F57A000C40F75 /* PostService.swift */; };
+		454A4D192A8F5BBF00C40F75 /* PostsGridViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454A4D182A8F5BBF00C40F75 /* PostsGridViewModel.swift */; };
 		458AF4B72A7D30FF004C3376 /* InstacloneApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458AF4B62A7D30FF004C3376 /* InstacloneApp.swift */; };
 		458AF4B92A7D30FF004C3376 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458AF4B82A7D30FF004C3376 /* ContentView.swift */; };
 		458AF4BB2A7D3100004C3376 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 458AF4BA2A7D3100004C3376 /* Assets.xcassets */; };
@@ -60,6 +62,8 @@
 		450CF5DD2A83EEB800F7D57A /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		450CF5E12A83F11D00F7D57A /* LoginViewMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewMode.swift; sourceTree = "<group>"; };
 		454A4D142A8F511A00C40F75 /* FeedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewModel.swift; sourceTree = "<group>"; };
+		454A4D162A8F57A000C40F75 /* PostService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostService.swift; sourceTree = "<group>"; };
+		454A4D182A8F5BBF00C40F75 /* PostsGridViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsGridViewModel.swift; sourceTree = "<group>"; };
 		458AF4B32A7D30FF004C3376 /* Instaclone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Instaclone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		458AF4B62A7D30FF004C3376 /* InstacloneApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstacloneApp.swift; sourceTree = "<group>"; };
 		458AF4B82A7D30FF004C3376 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -120,14 +124,6 @@
 				458AF4F02A824E77004C3376 /* CompleteSignUpView.swift */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		450CF5D12A83DF5400F7D57A /* Service */ = {
-			isa = PBXGroup;
-			children = (
-				450CF5D22A83DF6900F7D57A /* AuthService.swift */,
-			);
-			path = Service;
 			sourceTree = "<group>";
 		};
 		450CF5D62A83E42900F7D57A /* View */ = {
@@ -231,7 +227,6 @@
 			children = (
 				458AF4C42A7D3137004C3376 /* App */,
 				458AF4CC2A7D3177004C3376 /* Core */,
-				458AF4CB2A7D3175004C3376 /* Extensions */,
 				458AF4CA2A7D3173004C3376 /* Model */,
 				458AF4C92A7D3171004C3376 /* Services */,
 				450CF5C52A83DC5F00F7D57A /* GoogleService-Info.plist */,
@@ -260,8 +255,10 @@
 		458AF4C92A7D3171004C3376 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				458AF5022A84F52C004C3376 /* UserService.swift */,
+				450CF5D22A83DF6900F7D57A /* AuthService.swift */,
 				4595B6ED2A86830900FF318B /* ImageUploader.swift */,
+				454A4D162A8F57A000C40F75 /* PostService.swift */,
+				458AF5022A84F52C004C3376 /* UserService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -273,13 +270,6 @@
 				458AF4F62A825B41004C3376 /* Post.swift */,
 			);
 			path = Model;
-			sourceTree = "<group>";
-		};
-		458AF4CB2A7D3175004C3376 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Extensions;
 			sourceTree = "<group>";
 		};
 		458AF4CC2A7D3177004C3376 /* Core */ = {
@@ -302,7 +292,6 @@
 			children = (
 				450CF5D02A83DF4000F7D57A /* View */,
 				450CF5DA2A83E48300F7D57A /* ViewModel */,
-				450CF5D12A83DF5400F7D57A /* Service */,
 			);
 			path = Authentication;
 			sourceTree = "<group>";
@@ -363,10 +352,11 @@
 		458AF4D82A7D3C39004C3376 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				458AF4DA2A7D3CA6004C3376 /* UserStatView.swift */,
+				45CFA33D2A8AA74800C6C289 /* CircularProfileImageView.swift */,
 				458AF4E82A824309004C3376 /* ICTextField.swift */,
 				458AF4F82A826A49004C3376 /* PostsGridView.swift */,
-				45CFA33D2A8AA74800C6C289 /* CircularProfileImageView.swift */,
+				454A4D182A8F5BBF00C40F75 /* PostsGridViewModel.swift */,
+				458AF4DA2A7D3CA6004C3376 /* UserStatView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -469,6 +459,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				454A4D192A8F5BBF00C40F75 /* PostsGridViewModel.swift in Sources */,
 				454A4D152A8F511A00C40F75 /* FeedViewModel.swift in Sources */,
 				458AF5092A850425004C3376 /* EditProfileView.swift in Sources */,
 				458AF5032A84F52C004C3376 /* UserService.swift in Sources */,
@@ -476,6 +467,7 @@
 				450CF5D32A83DF6900F7D57A /* AuthService.swift in Sources */,
 				458AF4E92A824309004C3376 /* ICTextField.swift in Sources */,
 				458AF4DF2A7D4140004C3376 /* FeedCell.swift in Sources */,
+				454A4D172A8F57A000C40F75 /* PostService.swift in Sources */,
 				458AF4D72A7D33FB004C3376 /* ProfileView.swift in Sources */,
 				450CF5E22A83F11D00F7D57A /* LoginViewMode.swift in Sources */,
 				458AF4B92A7D30FF004C3376 /* ContentView.swift in Sources */,

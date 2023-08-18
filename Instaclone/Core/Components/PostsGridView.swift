@@ -5,10 +5,15 @@
 //  Created by Or Israeli on 08/08/2023.
 //
 
+import Kingfisher
 import SwiftUI
 
 struct PostsGridView: View {
-	var posts: [Post]
+	@StateObject var viewModel: PostsGridViewModel
+	
+	init(user: User) {
+		self._viewModel = StateObject(wrappedValue: PostsGridViewModel(user: user))
+	}
 	
 	private let columns: [GridItem] = [
 		GridItem(.flexible(), spacing: 1),
@@ -20,8 +25,8 @@ struct PostsGridView: View {
 	
     var body: some View {
 		LazyVGrid(columns: columns, spacing: 1) {
-			ForEach(posts) { post in
-				Image(post.imageURL)
+			ForEach(viewModel.posts) { post in
+				KFImage(URL(string: post.imageURL))
 					.resizable()
 					.scaledToFill()
 					.frame(width: imageDimension, height: imageDimension)
@@ -33,6 +38,6 @@ struct PostsGridView: View {
 
 struct PostsGridView_Previews: PreviewProvider {
     static var previews: some View {
-		PostsGridView(posts: Post.mockPosts)
+		PostsGridView(user: User.mockUsers[0])
     }
 }
